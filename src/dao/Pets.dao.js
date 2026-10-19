@@ -14,6 +14,10 @@ export default class Pet {
         return petModel.create(doc);
     }
 
+    saveMany = (docs) =>{
+        return petModel.insertMany(docs);
+    }
+
     update = (id,doc) =>{
         return petModel.findByIdAndUpdate(id,{$set:doc})
     }

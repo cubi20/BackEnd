@@ -15,6 +15,10 @@ export default class Users {
         return userModel.create(doc);
     }
 
+    saveMany = (docs) =>{
+        return userModel.insertMany(docs);
+    }
+
     update = (id,doc) =>{
         return userModel.findByIdAndUpdate(id,{$set:doc})
     }

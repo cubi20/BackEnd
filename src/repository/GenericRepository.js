@@ -16,6 +16,10 @@ export default class GenericRepository {
         return this.dao.save(doc);
     }
 
+    createMany = (docs) =>{
+        return this.dao.saveMany(docs);
+    }
+
     update = (id,doc) =>{
         return this.dao.update(id,doc);
     }

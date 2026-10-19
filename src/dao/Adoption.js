@@ -14,6 +14,10 @@ export default class Adoption {
         return adoptionModel.create(doc);
     }
 
+    saveMany = (docs) =>{
+        return adoptionModel.insertMany(docs);
+    }
+
     update = (id,doc) =>{
         return adoptionModel.findByIdAndUpdate(id,{$set:doc})
     }
